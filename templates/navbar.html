@@ -1,0 +1,31 @@
+{% block navbar %}
+<nav class="navbar-x">
+  <div class="content-x">
+    <div class="logo-x">
+      <img class="logo-x" src="{{ url_for('.static', filename='img/faviconblue.ico')}}" alt="">
+      <a href="/">eCoin</a>
+    </div>
+    <ul class="menu-list">
+      <div class="icon cancel-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/prices">Prices</a></li>
+      <li><a href="/criptos">Cryptos</a></li>
+      <li><a href="/currencies">Currencies</a></li>
+    </ul>
+    <div class="icon menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>  
+<div id="banner" class="banner">
+  <figure class="image">
+    <figcaption class="image__caption image__caption--fade">
+      <span class="caption__title">Cripto Coins in yours hands</span>
+      CryptoCurrencies made Easy
+    </figcaption>    
+  </figure>
+</div> 
+{% endblock %}

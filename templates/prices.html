@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block title %} | Prices {% endblock %}
+{% block head %}
+  {{ super() }}  
+{% endblock %}
+{% block prices %}
+<div class="content-center">
+    <!-- <div class="prices-info"> -->
+      <div class="card text-center col-md-4">
+        <div class="card-header">
+          <h2 class="card-title">{{ "Price of Cryptocurrency " ~ _resultSell.base }} 
+            <span><img src="{{ url_for('.static', filename='img/_iconsCrypto/'~file_icon) }}" alt=""></span>
+          </h2>    
+        </div>
+      <div class="prices-sell">
+          <p class="card-text">{{ "Sell " ~ _resultSell.amount }}  {{ _resultSell.currency }}</p>
+      </div>
+      <div class="prices-buy">
+          <p class="card-text">{{ "Buy " ~ _resultBuy.amount }}  {{ _resultBuy.currency }}</p>
+      </div>
+      <div class="prices-spot">
+        <p class="card-text">{{ "Spot " ~ _resultSpot.amount }}  {{ _resultSpot.currency }}</p>
+       </div>         
+    </div>
+</div>    
+{% endblock %}

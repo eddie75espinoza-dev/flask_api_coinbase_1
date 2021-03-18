@@ -1,0 +1,66 @@
+[
+    {
+        "code" : "ARS",
+        "file" : "Argentina-Flag-icon.png"
+    },
+    {
+        "code" : "BRL",
+        "file" : "Brazil-Flag-icon.png"
+    },
+    {
+        "code" : "CAD",
+        "file" : "Canada-Flag-icon.png"
+    },
+    {
+        "code" : "CNH",
+        "file" : "China-Flag-icon.png"
+    },
+    {
+        "code" : "CNY",
+        "file" : "China-Flag-icon.png"
+    },
+    {
+        "code" : "COP",
+        "file" : "Colombia-Flag-icon.png"
+    },
+    {
+        "code" : "CLP",
+        "file" : "Chile-Flag-icon.png"
+    },
+    {
+        "code" : "EUR",
+        "file" : "Europe-Flag-icon.png"
+    },
+    {
+        "code" : "MXN",
+        "file" : "Mexico-Flag-icon.png"
+    },
+    {
+        "code" : "JPY",
+        "file" : "Japan-Flag-icon.png"
+    },
+    {
+        "code" : "CHF",
+        "file" : "Switzerland-Flag-icon.png"
+    },
+    {
+        "code" : "USD",
+        "file" : "United-States-of-America-Flag-icon.png"
+    },
+    {
+        "code" : "UYU",
+        "file" : "Uruguay-Flag-icon.png"
+    },
+    {
+        "code" : "VES",
+        "file" : "Venezuela-Flag-icon.png"
+    },
+    {
+        "code" : "XAU",
+        "file" : "Action-lock-icon.png"
+    },
+    {
+        "code" : "XAG",
+        "file" : "Action-lock-silver-icon.png"
+    }
+]

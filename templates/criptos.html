@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block title %} | Criptocurrencies {% endblock %}
+{% block head %}
+  {{ super() }}  
+{% endblock %}
+{% block criptos %}
+<!-- Search para solicitar la informacion del cripto y divisa -->
+<div class="content-search">
+  <h2>What is the price?</h2>  
+</div>
+<div class="content-criptoPrice">
+<form action="/criptos" method="post">
+  <select class="form-control custom-select custom-select-md mb-3" name='coin' autofocus>
+    <option selected>Open this select Coin</option>    
+    <option value="BTC">Bitcoin</option>
+    <option value="BCH">Bitcoin Cash</option>
+    <option value="BSV">Bitcoin SV</option>
+    <option value="DASH">Dash</option>
+    <option value="EOS">Eos</option>
+    <option value="ETH">Ethereum</option>
+    <option value="ETC">Ethereum Classic</option>
+    <option value="LTC">Litecoin</option>
+    <option value="MKR">Maker</option>
+    <option value="WBTC">Wrapped Bitcoin</option>  
+    <option value="YFI">Yearn.finance</option>
+  </select>
+  <select class="custom-select custom-select-md mb-3" name='opc_currency'>
+    <option selected>Open this select Currencies</option>
+    <option value="ARS">Argentine Peso</option>   
+    <option value="BRL">Brazilian Real</option>
+    <option value="CAD">Canadian Dollar</option>
+    <option value="CNH">Chinese Renminbi Yuan Offshore</option>
+    <option value="CNY">Chinese Renminbi Yuan</option>
+    <option value="COP">Colombian Peso</option>
+    <option value="CLP">Chilean Peso</option>
+    <option value="EUR">Euro</option>
+    <option value="MXN">Mexican Peso</option>
+    <option value="JPY">Japanese Yen</option>
+    <option value="CHF">Swiss Franc</option>
+    <option value="USD">US Dollar</option>
+    <option value="UYU">Uruguayan Peso</option>
+    <option value="VES">Venezuelan Bolívar Soberano</option>
+    <option value="XAU">Gold (Troy Ounce)</option>
+    <option value="XAG">Silver (Troy Ounce)</option>
+  </select>
+  <div class="bor-btn">
+    <button class="fas fa-search" type="submit"></button>
+  </div>
+</form>
+</div>
+<!-- Inforrmacion del precio -->
+<div class="content-criptoPrice">
+  <div class="card text-center col-md-4">
+    <div class="card-header">
+      <h3>{{ pair.base }} <span><img src="{{ url_for('.static', filename='img/_iconsCrypto/'~file_icon) }}" alt=""></span></h3>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{ 'Price: ' ~ pair.amount ~ ' ' ~ pair.currency}}</h4>
+      <p class="card-text">{{ name_currency }} <span><img class = "icon-flag" src="{{ url_for('.static', filename='img/_flags/'~flagName) }}" alt=""></span></p>
+      <a href="#" class="btn btn-primary">Buy now</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

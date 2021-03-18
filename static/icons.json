@@ -1,0 +1,50 @@
+[
+    {
+        "base" : "BIN",
+        "file" : "Binance-Coin-icon.png"
+    },
+    {
+        "base" : "BTC",
+        "file" : "Bitcoin-icon.png"
+    },
+    {
+        "base" : "BCH",
+        "file" : "Bitcoin-Cash-icon.png"
+    },
+    {
+        "base" : "BSV",
+        "file" : "Bitcoin-icon.png"
+    },
+    {
+        "base" : "DASH",
+        "file" : "Dash-icon.png"
+    },
+    {
+        "base" : "EOS",
+        "file" : "EOS-icon.png"
+    },
+    {
+        "base" : "ETH",
+        "file" : "Ethereum-icon.png"
+    },
+    {
+        "base" : "ETC",
+        "file" : "Ethereum-Classic-icon.png"
+    },
+    {
+        "base" : "LTC",
+        "file" : "Litecoin-icon.png"
+    },
+    {
+        "base" : "MKR",
+        "file" : "Maker-icon.png"
+    },
+    {
+        "base" : "WBTC",
+        "file" : "Bitcoin-icon.png"
+    },
+    {
+        "base" : "YFI",
+        "file" : "Yen-JPY-icon.png"
+    }
+]
