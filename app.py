@@ -47,7 +47,7 @@ def get_price():
     r = requests.get(_url_api_currency)
     _currencyUSD = get_currency_name('USD')
     _priceUSD = float(r.json()['data']['amount'])   # string amount se convierte a float    
-    _priceFormatUSD = f'{_priceUSD:.2f}' # se da formato de 2 decimales al precio     
+    _priceFormatUSD = f'{_priceUSD:,.2f}' # se da formato americano de , y 2 decimales al precio     
     return _currencyUSD, _priceFormatUSD
 
 def get_cripto_price(crypto_name = 'BTC', id_currency = 'USD'):
@@ -58,6 +58,7 @@ def get_cripto_price(crypto_name = 'BTC', id_currency = 'USD'):
     cripto_pair = crypto_name +'-'+ id_currency    
     cripto_price = client.get_spot_price(currency_pair = cripto_pair)    
     return cripto_price
+
 def get_crypto_icon(base):
     ''' 
     Obtiene el nombre del archivo del icono segun la criptomoneda
@@ -95,7 +96,7 @@ def get_currencies():
                 flagName = get_flag(currencyCode)         
                 price = float(r.json()['data']['amount'])   # string amount se convierte a float          
                 currencyCode = currencyCode.upper()
-                priceFormat = f'{price:.2f}' # se da formato de 2 decimales al precio
+                priceFormat = f'{price:,.2f}' # se da formato de 2 decimales al precio
                 return render_template('currency.html', currencyName = currencyName, price = priceFormat, currencyCode = currencyCode, flagName = flagName)            
     except KeyError:
         currencyNot = r.json()['errors'][0]['message'] # mensaje de error cuando la moneda es invalida
@@ -136,6 +137,7 @@ def criptos():
             file_icon = get_crypto_icon(crypto_name)
             pair = []
             pair = get_cripto_price(crypto_name, id_currency)
+            print(pair)
             flagName = get_flag(id_currency)
             return render_template('criptos.html', pair = pair, name_currency = name_currency, flagName = flagName, file_icon = file_icon)
     except KeyError:
@@ -144,6 +146,6 @@ def criptos():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='192.168.0.99', port = 5000, threaded=True, debug=True)
 
 

@@ -20,12 +20,14 @@
           <h3 class="card-text">
             <span>{{ 'in ' ~ _USD_curr|e }}</span>
             <span><img class = "icon-flag" src="{{ url_for('.static', filename='img/_flags/United-States-of-America-Flag-Icon.png') }}" alt=""></span>
+            <div><a href="#" class="btn btn-primary">Buy now</a></div>
           </h3>
         {% elif currencyName != none %}
           <h2 class="card-text"><span>{{ 'Price of Bitcoin ' ~ price|e }}</span></h2>
           <h3 class="card-text">
             <span>{{ 'in ' ~ currencyName|e}}</span>
             <span><img class = "icon-flag" src="{{ url_for('.static', filename='img/_flags/'~flagName) }}" alt=""></span>
+            <div><a href="#" class="btn btn-primary">Buy now</a></div>
           </h3>
         {% else %}
           <h2 class="card-text">Currency not found</h2>

@@ -1,0 +1,16 @@
+{% block banner%}
+<div id="banner" class="banner">
+  <picture>
+    <source srcset="{{ url_for('.static', filename='img/fondo_320.jpg') }}" media="(max-width: 320px)">
+      <source srcset="{{ url_for('.static', filename='img/fondo_680.jpg') }}" media="(max-width: 680px)">
+        <source srcset="{{ url_for('.static', filename='img/fondo_1256.jpg') }}" media="(max-width: 1256px)">
+    <img src="{{ url_for('.static', filename='img/fondo_max.jpg') }}" width="100%" alt="Bitcoin" media="(max-width: 2100px)">
+  </picture>
+    <figure class="image">
+      <figcaption class="image__caption image__caption--fade">
+        <span class="caption__title">Cripto Coins in yours hands</span>
+        CryptoCurrencies made Easy
+      </figcaption>    
+    </figure>
+</div>
+{% endblock %}

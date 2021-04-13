@@ -330,7 +330,7 @@
   width: 100%;
   position: absolute;
   background-color: var(--color-primary);
-  min-height: 20vh;
+  min-height: 10vh;
   overflow: hidden;  
 }
 
@@ -338,7 +338,7 @@
 #about .footer-w{  
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-columns: 15% 25% 25% 35%;
 }
 /* Img */
 .footer-img img{  
@@ -430,4 +430,16 @@
   .footer-img{
     transform: scale(0.3, 0.3);
   }
+}
+@media only screen and (max-width: 322px){  
+  .image:after, .image__caption{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 0;
+    left: 0;  
+  }
+  .footer-img{
+    transform: scale(0.5, 0.5);
+    }
 }
