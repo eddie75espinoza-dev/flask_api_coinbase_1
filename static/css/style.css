@@ -338,7 +338,8 @@
 #about .footer-w{  
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: 15% 25% 25% 35%;
+  /* grid-template-columns: 15% 25% 25% 35%; */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
 }
 /* Img */
 .footer-img img{  

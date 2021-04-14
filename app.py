@@ -129,7 +129,7 @@ def criptos():
         pair = []
         pair = get_cripto_price(crypto_name, id_currency)
         file_icon = get_crypto_icon(crypto_name)
-
+        flagName = get_flag(id_currency)
         if request.method == 'POST':
             crypto_name = request.form['coin']            
             id_currency = request.form['opc_currency']
@@ -142,7 +142,7 @@ def criptos():
             return render_template('criptos.html', pair = pair, name_currency = name_currency, flagName = flagName, file_icon = file_icon)
     except KeyError:
         print('Error')
-    return render_template('criptos.html', pair = pair, file_icon = file_icon)
+    return render_template('criptos.html', pair = pair, file_icon = file_icon, flagName = flagName)
 
 
 if __name__ == "__main__":
