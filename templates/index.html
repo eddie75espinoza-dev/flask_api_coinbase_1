@@ -16,11 +16,8 @@
     <title>eCoin {% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
-<body>
-    <div>
-        {% include 'navbar.html' %}
-        
-    </div>       
+<body>    
+    {% include 'navbar.html' %}          
     <div class="content-info">
         {% block prices %}{% endblock %}
         {% block criptos %}{% endblock %}

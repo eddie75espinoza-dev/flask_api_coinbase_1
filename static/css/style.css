@@ -80,10 +80,9 @@
   color: var(--color-light);
 }
 .banner{
-  background: url('../img/1036635.jpg') no-repeat;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+  background: url('../img/1036635.jpg') no-repeat center;
+  width: 100%;    
+  background-size: contain;  
   background-attachment: fixed;
 }
 /* Overlay banner ******************/
@@ -230,7 +229,7 @@
 /* Container *********************************/
 .content-info{
   background-color: var(--color-background); 
-  background: url('../img/Forex-2.jpg') no-repeat;
+  background: url('../img/Forex-2.jpg') center no-repeat;
 }
 .content-search h2{
   padding: 1rem 2rem;
@@ -257,7 +256,7 @@
     border: 3px solid var(--color-secondary);
     border-radius: 8px;
     outline: none;
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 .button-search{  
     border-radius: 8px;
@@ -423,7 +422,7 @@
   }
  }
 
-@media only screen and (max-width: 868px){
+@media only screen and (max-width: 868px){  
   #about .footer-w{
     display: block;    
     text-align: center;    
@@ -432,14 +431,14 @@
     transform: scale(0.3, 0.3);
   }
 }
-@media only screen and (max-width: 322px){  
+@media only screen and (max-width: 322px){    
   .image:after, .image__caption{
     position: absolute;
     width: 30%;
     height: 30%;
     top: 0;
     left: 0;  
-  }
+  }  
   .footer-img{
     transform: scale(0.5, 0.5);
     }
